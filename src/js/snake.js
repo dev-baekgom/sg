@@ -7,6 +7,7 @@ let velocityX = 0, velocityY = 0;
 
 const trail = [];
 let trailLength = 1;
+let best_score = 0;
 
 function game() {
     positionX += (15/framelimit) * velocityX;
@@ -54,57 +55,4 @@ function game() {
 
     ctx.fillStyle = "grey";
     ctx.fillRect(fruit_positionX * gridSize, fruit_positionY * gridSize, gridSize, gridSize);
-}
-
-function ate(){
-  trailLength++;
-  fruit_positionX = Math.floor(Math.random()*tileCount_X);
-  fruit_positionY = Math.floor(Math.random()*tileCount_Y);
-}
-
-function game_over(text){
-  Swal.fire({
-    title: 'Game-Over',
-    text: text,
-    icon: 'warning',
-    confirmButtonText: 'Ok'
-  })
-  positionX = 5, positionY = 5, velocityX = 0, velocityY = 0, fruit_positionX = 10, fruit_positionY = 10, trailLength = 1;
-}
-
-function keyPush(evt) {
-    switch(evt.keyCode) {
-        case 37:
-            velocityX = -1;
-            velocityY = 0;
-            break;
-        case 65:
-            velocityX = -1;
-            velocityY = 0;
-            break;
-        case 38:
-            velocityX = 0;
-            velocityY = -1;
-            break;
-        case 87:
-            velocityX = 0;
-            velocityY = -1;
-            break;
-        case 39:
-            velocityX = 1;
-            velocityY = 0;
-            break;
-        case 68:
-            velocityX = 1;
-            velocityY = 0;
-            break;
-        case 40:
-            velocityX = 0;
-            velocityY = 1;
-            break;
-        case 83:
-            velocityX = 0;
-            velocityY = 1;
-            break;
-    }
 }
