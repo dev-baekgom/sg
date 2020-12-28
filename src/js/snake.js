@@ -30,12 +30,12 @@ function game() {
         game_over('Ouch! You hit the wall!');
     }
 
-    ctx.fillStyle = "black";
+    ctx.fillStyle = "#333538";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     ctx.fillStyle = "white"
     for(let i = 0; i < trail.length; i++) {
-        ctx.fillRect(trail[i].x * gridSize, trail[i].y * gridSize, gridSize, gridSize)
+        ctx.fillRect(trail[i].x * gridSize, trail[i].y * gridSize, gridSize-2, gridSize-2)
         if(trail[i].x === positionX && trail[i].y === positionY && trailLength != 1) {
             game_over('You bit your tail!');
         }
@@ -54,5 +54,5 @@ function game() {
     }
 
     ctx.fillStyle = "grey";
-    ctx.fillRect(fruit_positionX * gridSize, fruit_positionY * gridSize, gridSize, gridSize);
+    ctx.fillRect(fruit_positionX * gridSize, fruit_positionY * gridSize, gridSize-2, gridSize-2);
 }
