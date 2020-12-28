@@ -63,7 +63,12 @@ function ate(){
 }
 
 function game_over(text){
-  alert(text);
+  Swal.fire({
+    title: 'Game-Over',
+    text: text,
+    icon: 'warning',
+    confirmButtonText: 'Ok'
+  })
   positionX = 5, positionY = 5, velocityX = 0, velocityY = 0, fruit_positionX = 10, fruit_positionY = 10, trailLength = 1;
 }
 
