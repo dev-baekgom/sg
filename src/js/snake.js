@@ -1,14 +1,3 @@
-const gridSize = 20, tileCount_X = canvas.width / gridSize, tileCount_Y = canvas.height / gridSize;
-
-let positionX = 5, positionY = 5;
-let fruit_positionX = 10, fruit_positionY = 10;
-
-let velocityX = 0, velocityY = 0;
-
-const trail = [];
-let trailLength = 1;
-let best_score = 0;
-
 function game() {
     positionX += (15/framelimit) * velocityX;
     positionY += (15/framelimit) * velocityY;
