@@ -42,6 +42,6 @@ function game() {
       ate();
     }
 
-    ctx.fillStyle = "grey";
+    ctx.fillStyle = "#545454";
     ctx.fillRect(fruit_positionX * gridSize, fruit_positionY * gridSize, gridSize-2, gridSize-2);
 }

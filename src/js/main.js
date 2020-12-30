@@ -12,8 +12,9 @@ let velocityX = 0, velocityY = 0;
 
 const trail = [];
 let trailLength = 1;
+let score = 0;
 let best_score = 0;
-
+let bss = 0;
 
 
 function resize() {
@@ -28,15 +29,7 @@ window.onload = () => {
     document.addEventListener("keydown", keyPush);
     window.addEventListener('resize', resize, false);
     setInterval(game, 1000 / framelimit);
-    Swal.fire({
-      width: 'fit-content',
-      icon: 'info',
-      iconColor: '#545454',
-      title: 'Move by arrow-keys.\nEat the fruit to grow!\nDon\'t bite your tail or hit the wall!',
-      confirmButton: 'Ok',
-      confirmButtonColor: '#545454',
-      footer: '<a href="https://github.com/dev-baekgom/" style="color:#545454">My github  <i class="fab fa-github"></i></a>'
-    })
+    help();
 }
 
 const Toast = Swal.mixin({
