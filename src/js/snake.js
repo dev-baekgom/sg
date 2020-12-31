@@ -22,7 +22,7 @@ function game() {
     ctx.fillStyle = "#333538";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.fillStyle = "white"
+    ctx.fillStyle = "#b6baba"
     for(let i = 0; i < trail.length; i++) {
         ctx.fillRect(trail[i].x * gridSize, trail[i].y * gridSize, gridSize-2, gridSize-2)
         if(trail[i].x === positionX && trail[i].y === positionY && trailLength != 1) {
