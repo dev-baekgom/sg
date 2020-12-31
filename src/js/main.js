@@ -16,6 +16,7 @@ let score = 0;
 let best_score = 0;
 let bss = 0;
 
+const messege_good = ['Awesome!', 'Nice!', 'Wow!', 'Hurray!']
 
 function resize() {
     ctx.canvas.height = window.innerHeight;
