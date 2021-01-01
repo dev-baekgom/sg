@@ -4,18 +4,22 @@ function game() {
 
     if(positionX < 0) {
         positionX = 0;
+        wallsnd();
         game_over('Ouch! You hit the wall!');
     }
     if(positionX > tileCount_X - 1) {
         positionX = tileCount_X - 1;
+        wallsnd();
         game_over('Ouch! You hit the wall!');
     }
     if(positionY < 0) {
         positionY = 0;
+        wallsnd();
         game_over('Ouch! You hit the wall!');
     }
     if(positionY > tileCount_Y - 1) {
         positionY = tileCount_Y - 1;
+        wallsnd();
         game_over('Ouch! You hit the wall!');
     }
 

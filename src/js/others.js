@@ -21,6 +21,7 @@ function ate(){
       backgound: '#b6baba',
     })
   }
+  eatsnd();
 }
 
 function game_over(text){
