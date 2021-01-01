@@ -1,6 +1,6 @@
 function iecheck(){
   var agent = navigator.userAgent.toLowerCase();
-  if (agent.indexOf("msie") != -1) {
-    window.location.href = 'https://dev-baekgom.github.io/sg/ie'
+  if ( (navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1)) {
+       window.location.href = 'ie.html';
   }
 }
